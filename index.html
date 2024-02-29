@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix India – Watch TV Shows Online, Watch Movies Online</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" type="image/x-icon"
+        href="https://cdn.icon-icons.com/icons2/2699/PNG/512/netflix_logo_icon_170919.png">
+</head>
+<style>
+    body {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+    }
+
+    .container1 {
+        display: grid;
+        grid-template-areas: 'sec-1'
+            'sec-2'
+            'sec-3'
+            'sec-4'
+            'sec-5'
+            'sec-6'
+            'sec-7';
+    }
+
+    #sec-1 {
+    grid-area: sec-1;
+    background-image: url(bg\ \(1\).jpg);
+    backdrop-filter: drop-shadow(4px 4px 10px black);
+    background-size: cover;
+    height: 40rem;
+    /* width: 84.3rem; */
+    width: 100%;
+    display: flex;
+    margin: auto;
+    color: white;
+}
+    /* #sec-1 {
+        grid-area: sec-1;
+        background-image: url(bg\ \(1\).jpg);
+        backdrop-filter: drop-shadow(4px 4px 10px black);
+        background-size: cover;
+        height: 40rem;
+        width: 84.3rem;
+        width: 100%;
+        display: flex;
+        margin: auto;
+        color: white;
+    } */
+
+    #nav {
+        display: flex;
+        margin-left: -4rem;
+        position: absolute;
+    }
+
+    #sec-1 img {
+        display: flex;
+        width: 10rem;
+        height: 6rem;
+        top: 1rem;
+        margin: -0.4rem 2.5rem;
+        position: absolute;
+    }
+
+    #lang {
+        height: 2rem;
+        width: 5rem;
+        display: flex;
+        margin: 2rem 70rem;
+        position: absolute;
+        background-color: transparent;
+        color: white;
+        border-radius: 0.3rem;
+    }
+
+    .lang_option {
+        background-color: grey;
+    }
+
+    .seticon {
+        margin: 3rem 4rem;
+    }
+
+    #btn-1 {
+        height: 2.2rem;
+        width: 6rem;
+        background-color: red;
+        color: white;
+        border-radius: 0.5rem;
+        margin: 2rem 76rem;
+        position: absolute;
+        border: 2px solid red;
+    }
+
+    .title {
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sec-1 h1 {
+        font-size: 3.5rem;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+    }
+
+    #sec-1 h4 {
+        font-size: 1.8rem;
+        line-height: 0rem;
+    }
+
+    #sec-1 h5 {
+        font-size: 1rem;
+        line-height: 0rem;
+    }
+
+    #email_box1 {
+        display: flex;
+        margin-bottom: -6rem;
+    }
+
+    #email_box {
+        width: 36rem;
+        height: 3rem;
+    }
+
+    #btn-2 {
+        background-color: red;
+        color: white;
+        width: 9rem;
+        font-size: 1.2rem;
+        text-align: center;
+        border: 2px solid red;
+    }
+
+    #i {
+        margin: -7px -7px;
+        /* top: 5px; */
+        font-size: 2.3rem;
+        position: absolute;
+    }
+
+    #sec-2 {
+        grid-area: sec-2;
+        background-color: black;
+        height: 32rem;
+        width: 100%;
+        display: flex;
+        margin: auto;
+        color: black;
+        border-top: 0.6rem solid #333;
+        color: white;
+        display: grid;
+        grid-template-areas: 'title_2 img_2';
+    }
+
+    #title_2 {
+        grid-area: title_2;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    #img_2 {
+        grid-area: img_2;
+    }
+
+    #sec-2 img {
+        width: 32rem;
+        height: 24rem;
+        position: relative;
+    }
+
+    #sec-2 h1 {
+        font-size: 3rem;
+        line-height: 0px;
+    }
+
+    #sec-2 h3 {
+        font-size: 1.5rem;
+        line-height: 0px;
+    }
+
+    #video-tv {
+        margin: -320px 71px;
+    }
+
+    #myvideos {
+        margin: 0rem 38px;
+        width: 448px;
+    }
+
+    #sec-3 {
+        grid-area: sec-3;
+        background-color: black;
+        height: 32rem;
+        width: 100%;
+        display: flex;
+        margin: auto;
+        color: white;
+        border-top: 0.6rem solid #333;
+        display: grid;
+        grid-template-areas: 'mob title_sec3';
+    }
+
+    #mob {
+        grid-area: mob;
+    }
+
+    #mob img {
+        width: 32rem;
+        height: 25rem;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+    }
+
+    #title_sec3 {
+        grid-area: title_sec3;
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+    }
+
+    #sec-3 h1 {
+        font-size: 3rem;
+        line-height: 0px;
+    }
+
+    #sec-3 h3 {
+        font-size: 1.5rem;
+        line-height: 0px;
+    }
+
+    #mob_card {
+        display: grid;
+        grid-template-areas: 'mob_card_img mob_card_title  mob_card_title mob_card_animation';
+        grid-gap: -6rem;
+        width: 22rem;
+        height: 5rem;
+        margin: -8rem 11rem;
+        position: absolute;
+        border: 2px solid;
+        border-radius: 1rem;
+        background-color: black;
+    }
+
+    #mob_card_img {
+        grid-area: mob_card_img;
+
+    }
+
+    #mob_card_img img {
+        width: 4rem;
+        height: 5rem;
+    }
+
+    #mob_card_title {
+        grid-area: mob_card_title;
+        /* width: 3rem; */
+        height: 2rem;
+        padding: -2rem;
+        /* margin: -19px 5px; */
+        font-size: -16px;
+    }
+
+    #sec-3 h5 {
+        font-size: 1.2rem;
+        margin: 25px 3px;
+    }
+
+    #sec-3 h6 {
+        font-size: 0.9rem;
+        margin: 3;
+        margin: -22px 3px;
+        color: #0071eb;
+    }
+
+    #mob_card_animation {
+        grid-area: mob_card_animation;
+
+    }
+
+    #mob_card_animation img {
+        width: 44px;
+        height: 69px;
+        margin: 8px -15px;
+    }
+
+
+
+    #sec-4 {
+        grid-area: sec-4;
+        background-color: black;
+        height: 32rem;
+        width: 100%;
+        display: flex;
+        margin: auto;
+        color: black;
+        border-top: 0.6rem solid #333;
+        color: white;
+        display: grid;
+    }
+
+    #sec-4 img {
+        margin-top: -3rem;
+        margin-left: 30rem;
+        height: 22rem;
+        width: 33rem;
+        position: absolute;
+    }
+
+    #sec-4_head {
+        margin-left: 8rem;
+        margin-top: 10rem;
+        position: absolute;
+        font-size: 1.4rem;
+    }
+
+    #sec-4 video {
+        /* position: absolute; */
+        margin-left: 36rem;
+        margin-top: -3rem;
+        height: 15rem;
+        width: 21rem;
+    }
+
+    #sec-5 {
+        grid-area: sec-5;
+        background-color: black;
+        height: 32rem;
+        width: 100%;
+        /* display: flex; */
+        margin: auto;
+        color: black;
+        border-top: 0.6rem solid #333;
+        color: white;
+        display: grid;
+    }
+
+    #sec-5_head {
+        margin-left: 44rem;
+        margin-top: 10rem;
+        position: absolute;
+        font-size: 1.4rem;
+    }
+
+    #sec-5 img {
+        height: 21rem;
+        margin-left: 12rem;
+        margin-top: 10rem;
+    }
+
+    #sec-6 {
+        grid-area: sec-6;
+        background-color: black;
+        height: 62rem;
+        width: 100%;
+        margin: auto;
+        color: black;
+        border-top: 0.6rem solid #333;
+        color: white;
+        display: grid;
+    }
+
+    #sec-6_head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sec-6 h1 {
+        font-size: 3rem;
+    }
+
+    #sec-6 h2 {
+        margin-left: 2.1rem;
+    }
+
+    .sec-6_head {
+        border: 2px solid #303030;
+        width: 65rem;
+        height: 6rem;
+        font-size: 1.2rem;
+        background-color: #303030;
+    }
+
+    .sec-6_head:hover {
+        background-color: #606060;
+        cursor: pointer;
+    }
+
+    #sec-6 h3 {
+        text-align: center;
+
+    }
+
+    #sec-7 {
+        grid-area: sec-7;
+        background-color: black;
+        height: 30rem;
+        width: 100%;
+        margin: auto;
+        color: black;
+        border-top: 0.6rem solid #333;
+        color: white;
+        display: grid;
+    }
+
+    #sec-7_head {
+        margin-left: 16rem;
+        margin-top: 3rem;
+        position: absolute;
+    }
+
+    .sec-7_inner {
+        display: flex;
+        flex-direction: row;
+        /* margin: auto; */
+        column-gap: 8rem;
+        margin-left: 14rem;
+        margin-top: 8rem;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    #lang1 {
+        margin-left: 16rem;
+        border: 2px solid white;
+        width: 6rem;
+        height: 3rem;
+        text-align: center;
+        border-radius: 0.7rem;
+        background-color: black;
+        color: white;
+    }
+
+    #sec-7 h5 {
+        margin-left: 16rem;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    /* media query for mobile responsive  */
+    @media screen and (max-width: 480px) {
+        #sec-1 ,#sec-2 , #sec-3 , #sec-4 , #sec-5 , #sec-6 , #sec-7{
+    /* width: 101.5%; */
+    width: 101%;
+}
+    #lang {
+    margin: 2rem 53rem;
+}
+    #btn-1 {
+    margin: 2rem 60rem;
+}
+}
+</style>
+</head>
+
+<body>
+    <div class="container1">
+        <div id="sec-1">
+            <img src="netflix_PNG31.png" alt="">
+            <div id="nav">
+                <form action="#">
+                    <select name="languages" id="lang">
+                        <option class="lang_option" value="English">
+                            English
+                        </option>
+                        <option class="lang_option" value="Hindi">Hindi</option>
+                    </select>
+                </form>
+                <button id="btn-1"><a href="./sign_in_page.html">sign in</a> </button>
+            </div>
+            <div class="title">
+                <h1>Unlimited movies, TV</h1>
+                <h1>shows and more.</h1>
+                <h4>Watch anywhere. Cancel anytime.</h4>
+                <h5>Ready to watch? Enter your email to create or restart your membership.</h5>
+                <div id="email_box1"> <input id="email_box" type="email"> <button id="btn-2">Get Started<i
+                            class="material-icons" id="i">chevron_right</i> </button> </div>
+
+
+            </div>
+        </div>
+        <div id="sec-2">
+            <div id="title_2">
+                <h1>Enjoy on your TV.</h1>
+                <h3>Watch on smart TVs, PlayStation, Xbox,</h3>
+                <h3>Chromecast, Apple TV, Blu-ray players and</h3>
+                <h3>more.</h3>
+            </div>
+            <div id="img_2">
+                <img src="tv.png" alt="">
+                <div id="video-tv">
+
+                </div>
+                <video id="myvideos" src="video-tv.m4v" width="393px" height="220px"></video>
+            </div>
+
+        </div>
+        <div id="sec-3">
+            <div id="mob">
+                <img src="mob.jpg" alt="">
+                <div id="mob_card">
+                    <div id="mob_card_img">
+                        <img src="boxshot.png" alt="">
+                    </div>
+                    <div id="mob_card_title">
+                        <h5>Stranger Things</h5>
+                        <h6>Downloading.....</h6>
+                    </div>
+                    <div id="mob_card_animation"><img src="download-icon.gif" alt=""></div>
+                </div>
+            </div>
+            <div id="title_sec3">
+                <h1>Download your shows</h1>
+                <h1> to watch offline.</h1>
+                <h3>Save your favourites easily and always have</h3>
+                <h3>something to watch.</h3>
+            </div>
+
+        </div>
+        <div id="sec-4" class="sec-4_title">
+            <div id="sec-4_head">
+                <h1>Watch everywhere.</h1>
+                <h3>Stream unlimited movies and TV shows on <br>your phone, tablet, laptop, and TV</h3>
+                <!-- <h3> </h3> -->
+            </div>
+
+            <div id="img_2">
+                <img src="./device-pile-in.png" alt="">
+                <!-- <div id="video-tv">
+
+                </div> -->
+                <video id="myvideos" src="./sec4.m4v" width="393px" height="220px"></video>
+            </div>
+            <!-- <div id="myvideo1">
+                <img src="./device-pile-in.png" alt="Image here">
+                <video src="./sec4.m4v"></video>
+            </div> -->
+            <!-- <video src="./sec4.m4v"></video> -->
+        </div>
+        <div id="sec-5">
+            <div>
+                <img src="./sec5.png" alt="">
+            </div>
+            <div id="sec-5_head">
+                <h1>Create profiles for <br> children.</h1>
+                <h3>Send children on adventures with their <br> favourite characters in a space made just for <br>
+                    them—free with your membership.</h3>
+            </div>
+        </div>
+        <div id="sec-6">
+            <div id="sec-6_head">
+                <h1>Frequently Asked Questions</h1>
+                <div class="sec-6_head" id="sec-6_head1">
+                    <h2>What is Netflix? </h2>
+                </div> <br>
+                <div class="sec-6_head" id="sec-6_head2">
+                    <h2>How much does Netflix cost?</h2>
+                </div><br>
+                <div class="sec-6_head" id="sec-6_head3">
+                    <h2>Where can I watch?</h2>
+                </div><br>
+                <div class="sec-6_head" id="sec-6_head4">
+                    <h2>How do I cancel?</h2>
+                </div><br>
+                <div class="sec-6_head" id="sec-6_head5">
+                    <h2>What can I watch on Netflix?</h2>
+                </div><br>
+                <div class="sec-6_head" id="sec-6_head6">
+                    <h2>Is Netflix good for kids?</h2>
+                </div><br>
+                <div>
+                    <h3 id="sec-6_emailbox">Ready to watch? Enter your email to create or restart your membership.</h3>
+                    <div id="email_box1"> <input id="email_box" type="email"> <button id="btn-2">Get Started<i
+                                class="material-icons" id="i">chevron_right</i> </button> </div>
+                </div>
+            </div>
+        </div>
+        <div id="sec-7">
+            <div id="sec-7_head">
+                <h3>Questions? Call 000-800-919-1694</h3>
+            </div>
+            <div class="sec-7_inner">
+                <div class="ul-1">
+                    <ul>FAQ</ul>
+                    <ul>Account</ul>
+                    <ul>Job</ul>
+                    <ul>Privacy</ul>
+                    <ul>Contact us</ul>
+                    <ul>Only on Netflix</ul>
+                </div>
+                <div class="ul-2">
+                    <ul>Gift Card Term</ul>
+                    <ul>Media Centre</ul>
+                    <ul>Ways to watch</ul>
+                    <ul>Cookies Preference</ul>
+                    <ul>Speed test</ul>
+                </div>
+                <div class="ul-3">
+                    <ul>Help Centre</ul>
+                    <ul>Investor Relation</ul>
+                    <ul>Term of use</ul>
+                    <ul>Coporate Information</ul>
+                    <ul>Legal Notice</ul>
+                </div>
+            </div>
+            <form action="#">
+                <select name="languages" id="lang1">
+                    <option class="lang_option" value="English">
+                        English
+                    </option>
+                    <option class="lang_option" value="Hindi">Hindi</option>
+                </select>
+            </form>
+            <h5>Netflix India</h5>
+        </div>
+    </div>
+</body>
+<script>
+    var vid = document.getElementById("myvideos");
+    vid.autoplay = true;
+    vid.load();
+    var vid = document.getElementById("myvideo1");
+    vid.autoplay = true;
+    vid.load();
+</script>
+
+</html>
